@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SvrHandle.js</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1 id="header-el">SvrHandle.js</h1>
+	<br>
+	<h3 class="download-txt">npm i SvrHandle.js</h3>
+	<br><br>
+	<h4 class="server-settings">Server Name: </h4>
+	<input type="text" name="serverName" id="serverName-inp" title="Server Name">
+	<br>
+	<h4 class="server-settings">Server ID: </h4>
+	<input type="text" name="serverID" id="serverID-inp" title="Server ID">
+	<br>
+	<input type="checkbox" name="ispublic" id="ispublic-inp">
+	<br><br>
+	<button id="addToServer-btn" onclick="addToServer()">ADD TO SERVER</button>
+	<br><br><br><br>
+	<h4 class="server-settings">Server ID: </h4>
+	<br>
+	<input type="text" name="serverId-get" id="serverID-get-inp">
+	<br>
+	<button id="findServer-btn" onclick="getServer()">GET SERVER</button>
+
+	<script src="index.js"></script>
+</body>
+</html>
