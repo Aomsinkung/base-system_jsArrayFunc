@@ -22,6 +22,26 @@
 	font-size: 12px;
 }
 
+#get-el {
+	font-family: Prompt-ExtraLight;
+}
+
+#get2-el {
+	font-family: Prompt-ExtraLight;
+}
+
+#get3-el {
+	font-family: Prompt-ExtraLight;
+}
+
+#get4-el {
+	font-family: Prompt-ExtraLight;
+}
+
+#get5-el {
+	font-family: Prompt-ExtraLight;
+}
+
 @font-face {
 	font-family: Prompt-Medium;
 	src: url(Prompt/Prompt-Medium.ttf);
@@ -35,4 +55,9 @@
 @font-face {
 	font-family: Prompt-Light;
 	src: url(Prompt/Prompt-Light.ttf);
+}
+
+@font-face {
+	font-family: Prompt-ExtraLight;
+	src: url(Prompt/Prompt-ExtraLight.ttf);
 }

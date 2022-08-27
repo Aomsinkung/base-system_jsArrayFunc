@@ -1,8 +1,16 @@
-let AddTSrvBtn = document.getElementById("addToServer-btn");
-let serverName = document.getElementById("serverName-inp");
-let serverID = document.getElementById("serverID-inp");
+let AddTNdBtn = document.getElementById("addToNodes-btn");
+let nodeName = document.getElementById("nodename-inp");
+let nodeID = document.getElementById("nodeID-inp");
 let isPublicInp = document.getElementById("ispublic-inp");
-let serverIDGet = document.getElementById("serverID-get-inp");
+let serverIDGet = document.getElementById("nodeID-get-inp");
+let getEl = [
+	document.getElementById("get-el"),
+	document.getElementById("get2-el"),
+	document.getElementById("get3-el"),
+	document.getElementById("get4-el"),
+	document.getElementById("get5-el"),
+	];
+let additionalData = document.getElementById("additional-data-el");
 
 console.log("Pro tip: Use clear() function to clear the console if the console is messy.");
 
@@ -13,57 +21,60 @@ function getIsPublic() {
 function addToServer() {
 	alert("Are you sure to add your project to the BrowserExtend servers, you can't change this.");
 
-	if (serverID.value === "" || serverName.value === "")
+	if (nodeID.value === "" || nodeName.value === "")
 	{
-		alert("Can't Generate Server, ServerID or ServerName is missing check if you maded a typo");
+		alert("Can't Generate a node, Node.ID or Node.name is missing check if you maded a typo");
 		console.log("Stopped")
 		return;
 	}
 
-	console.log("Adding Server...");
-	servers.pop();
 	resetServer();
-	console.log("Added Server");
 }
 
-let server = {
+let node = {
 	name: "NaN",
 	id: "NaN",
 	isPublic: false,
+	additionalData: "NaN"
 }
 
-let servers = [server];
+let nodes = [node];
+
+nodes.pop();
 
 function resetServer() {
-	console.log("Resetting server system : " + serverID.value.toString());
-
-	servers.push({
-		name: serverName.value,
-		id: serverID.value,
+	nodes.push({
+		name: nodeName.value,
+		id: nodeID.value,
 		isPublic: isPublicInp.checked,
+		additionalData: additionalData.value,
 	});
 
-	console.log(servers)
-
-	console.log("Resetted server system : " + serverID.value.toString());
+	getEl[0].textContent = "Created A Node";
 }
 
 function getServer() {
 	alert("Finding Server...");
-	console.log(servers.length)
 
-	for (let i = 0; i < servers.length; i++)
+	for (let i = 0; i < nodes.length; i++)
 	{
-		console.log("Finding...");
-		if (servers[i].id === serverIDGet.value) {
-			console.log("Found It!");
-			server.name = servers[i].name;
-			server.id = servers[i].id;
-			server.isPublic = servers[i].isPublic;
+		if (nodes[i].id === serverIDGet.value) {
+			node.name = nodes[i].name;
+			node.id = nodes[i].id;
+			node.isPublic = nodes[i].isPublic;
+			node.additionalData = nodes[i].additionalData
 
-			console.log("\n");
-			console.log("Data: ");
-			console.log(server);
+			let logContent = [,
+			`name: ${node.name},`,
+			`id: ${node.id},`,
+			`isPublic: ${node.isPublic},`,
+			`additionalData: ${node.additionalData},`,
+			]
+
+			for (let i2 = 0; i < getEl.length; i++)
+			{
+				getEl[i].textContent = logContent[i];
+			}
 		}
 	}
 }

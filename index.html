@@ -6,21 +6,35 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h4 class="server-settings">Server Name: </h4>
-	<input type="text" name="serverName" id="serverName-inp" title="Server Name">
+	<h1 id="header-el">NodesFrame.js</h1>
 	<br>
-	<h4 class="server-settings">Server ID: </h4>
-	<input type="text" name="serverID" id="serverID-inp" title="Server ID">
+	<h3 class="download-txt">npm i NodesFrame.js</h3>
+	<br><br>
+	<h4 class="server-settings">Node Name: </h4>
+	<input type="text" name="nodename" id="serverName-inp" title="Server Name">
 	<br>
+	<h4 class="server-settings">Node ID: </h4>
+	<input type="text" name="nodeid" id="nodeID-inp" title="Server ID">
+	<br>
+	<h4 class="server-settings">Is public </h4>
 	<input type="checkbox" name="ispublic" id="ispublic-inp">
 	<br><br>
-	<button id="addToServer-btn" onclick="addToServer()">ADD TO SERVER</button>
+	<h4 class="server-settings">Additional Data</h4>
+	<textarea name="addtional-data" id="additional-data-el" cols="140" rows="30"></textarea>
+	<br>
+	<button id="addToNodes-btn" onclick="addToServer()">ADD TO NODES</button>
 	<br><br><br><br>
 	<h4 class="server-settings">Server ID: </h4>
 	<br>
-	<input type="text" name="serverId-get" id="serverID-get-inp">
+	<input type="text" name="nodeID-get" id="nodeID-get-inp">
 	<br>
-	<button id="findServer-btn" onclick="getServer()">GET SERVER</button>
+	<button id="findNode-btn" onclick="getServer()">GET SERVER</button>
+	<br><br><br><br>
+	<p id="get-el"></p>
+	<p id="get2-el"></p>
+	<p id="get3-el"></p>
+	<p id="get4-el"></p>
+	<p id="get5-el"></p>
 
 	<script src="index.js"></script>
 </body>
